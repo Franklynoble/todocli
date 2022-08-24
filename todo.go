@@ -31,7 +31,7 @@ func (l *List) Add(task string) {
 	*l = append(*l, t)
 }
 
-func (l *List) Completed(i int) error {
+func (l *List) Complete(i int) error {
 	ls := *l
 	if i <= 0 || i > len(ls) {
 		return fmt.Errorf("Item %d does not exist", i)
